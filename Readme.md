@@ -1,10 +1,39 @@
-## Run this project ##
+# Project Title
+Food Truck Finder
+
+## Description
+Our team in San Francisco are on a quest to discover the hidden gems of street food, particularly food trucks.
+The only requirement for the assignment is that  it gives us at least 5 food trucks to choose from a particular latitude and longitude.
+
+## Getting Started
+
+```bash
 pip install django
 pip install djangorestframework
-python .\manage.py migrate
-python .\manage.py import_foodtrucks .\data\food-truck-data.csv
-python .\manage.py runserver
+```
 
+### Dependencies
+django, djangorestframework
+
+### Executing program
+
+```bash
+python manage.py migrate
+python manage.py import_foodtrucks ./data/food-truck-data.csv
+python manage.py runserver
+```
+
+## Authors
+Marin Markovic
+
+## Built With
+
+- Django - The web framework used
+- PostgreSQL - Database
+
+## Result
+
+```bash
 request:
     http://127.0.0.1:8000/api/foodtrucks?latitude=37.79092151&longitude=-122.4001004
     GET /api/foodtrucks?latitude=37.79092151&longitude=-122.4001004
@@ -104,3 +133,22 @@ response:
             }
         ]
     }
+```
+
+### Justify Framework Choices
+
+- **Django**: Chosen for its "batteries-included" philosophy, Django offers a comprehensive standard library and components like an ORM for database interactions, an admin panel for easy management of data, and middleware support for extending request/response processing. It's also known for its robust security features, which are crucial for production-ready applications.
+- **Django REST framework**:  It simplifies and accelerates API development
+
+### Discuss Architecture
+
+- **RESTful API**
+- **Postgres**
+
+### Improve Solution
+
+- **NoSQL for Speed**
+- **Third-party Services**
+- **Performance Optimization**
+- **Scalability Enhancements**
+- **Testing and Security**
